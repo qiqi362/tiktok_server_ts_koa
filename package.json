@@ -1,0 +1,40 @@
+{
+  "name": "blog-server",
+  "version": "1.0.0",
+  "description": "#### Description {**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon app.ts",
+    "start": "npx ts-node app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/qitow/blog-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fhtwl-admin/system": "^0.0.10",
+    "@koa/cors": "^5.0.0",
+    "@types/koa": "^2.13.12",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-cors": "^0.0.16",
+    "koa-mysql": "^1.0.3",
+    "koa-router": "^12.0.1",
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/koa__cors": "^4.0.3",
+    "@types/koa-router": "^7.4.8",
+    "@types/mysql": "^2.15.24",
+    "koa-body": "^6.0.1"
+  }
+}
