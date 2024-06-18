@@ -1,7 +1,7 @@
 import Koa from 'koa'
 import http from 'http'
-import Config from './src/config/Config'
-import initCore from './src/core/init'
+import Config from './config/Config'
+import initCore from './core/init'
 
 const app = new Koa()
 const server: http.Server = new http.Server(app.callback())
