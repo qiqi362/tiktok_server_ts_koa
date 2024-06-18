@@ -2,9 +2,9 @@
   "name": "blog-server",
   "version": "1.0.0",
   "description": "#### Description {**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}",
-  "main": "index.js",
+  "main": "./src/app.ts",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon app.ts",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/app.ts",
     "start": "npx ts-node app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
