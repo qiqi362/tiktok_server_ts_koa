@@ -9,7 +9,7 @@ export default class Config {
   
   // mysql配置
   public static readonly MYSQL = {
-    DATABASE: 'blog_server',
+    DATABASE: 'tiktok',
     HOST: Config.IP,
     PORT: 3306,
     USER_NAME: 'root',

@@ -19,6 +19,7 @@
     "@fhtwl-admin/system": "^0.0.10",
     "@koa/cors": "^5.0.0",
     "@types/koa": "^2.13.12",
+    "dayjs": "^1.11.11",
     "jsonwebtoken": "^9.0.2",
     "koa": "^2.14.2",
     "koa-bodyparser": "^4.4.1",

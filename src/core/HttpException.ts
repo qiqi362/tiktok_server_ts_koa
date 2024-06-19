@@ -39,6 +39,7 @@ export class DataBaseFailed extends HttpException{
     this.errorCode = errorCode || 100005
   }
 }
+
 // 授权失败
 export class AuthFailed extends HttpException{
   constructor(msg?: string, errorCode?: number) {
@@ -46,5 +47,14 @@ export class AuthFailed extends HttpException{
     this.code = 401
     this.message = msg || '禁止访问'
     this.errorCode = errorCode || 100006
+  }
+}
+// 数据已存在
+export class DataExistFailed extends HttpException{
+  constructor(msg?: string, errorCode?: number) {
+    super()
+    this.code = 500
+    this.message = msg || '已存在该用户'
+    this.errorCode = errorCode || 100007
   }
 }

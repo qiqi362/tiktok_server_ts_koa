@@ -1,17 +1,25 @@
 import Router from 'koa-router'
 import { Models } from '../../../models/mysql-model'
 import { command } from '../../../server/mysql'
-import { Success } from '../../../core/HttpException'
-const router = new Router({prefix: '/api/system/auth'})
-router.post('/registe', async (ctx: Models.Ctx) => {
-  const { password, userName } = ctx.request.body
-  const res = (
-    await command(`select * from user where userName like '%${userName}%'`)
+import { Success, DataExistFailed } from '../../../core/HttpException'
+import dayjs from 'dayjs'
+const router = new Router({ prefix: '/api/system/auth' })
+
+const registe = async(password: string, username: string, results: Array<object>) => {
+  if (results?.length > 0) return new DataExistFailed()
+  const createTime = dayjs().format('YYYY-MM-DD HH:MM:ss')
+  const insertUserResults = (
+    await command(`insert into user (username, password, create_time, register_time, update_time) values ('${username}', '${password}', '${createTime}', '${createTime}', '${createTime}')`)
   ).results
-  console.log(7777777, password, userName, res)
+  return new Success(insertUserResults)
+}
 
-  const success = new Success(res)
-  ctx.body = success
+router.post('/registe', async (ctx: Models.Ctx) => {
+  const { password, username } = ctx.request.body
+  const results = (
+    await command(`select * from user where username='${username}'`)
+  ).results
+  const registeRes = await registe(password, username, results)
+  ctx.body = registeRes
 })
-
 export default router
