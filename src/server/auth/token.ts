@@ -10,7 +10,7 @@ import System from '@fhtwl-admin/system'
  * @returns
  */
 
-export function generateToken(uid: System.Uid, scope: System.Scope) {
+export function generateToken(uid: System.Uid, scope?: System.Scope) {
   // 传入id和权限
   const secretKey = Config.SAFE_CONFIG.SECRET_KEY
   const expiresIn = Config.SAFE_CONFIG.EXPIRES_IN

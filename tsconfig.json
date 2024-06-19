@@ -16,9 +16,9 @@
     "esModuleInterop": true,
     // 禁止对同一个文件的不一致的引用
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/server/*": ["./src/server/*"]
     }
   },
   "ts-node": {
