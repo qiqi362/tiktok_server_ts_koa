@@ -19,6 +19,7 @@
     "@fhtwl-admin/system": "^0.0.10",
     "@koa/cors": "^5.0.0",
     "@types/koa": "^2.13.12",
+    "bcryptjs": "^2.4.3",
     "dayjs": "^1.11.11",
     "jsonwebtoken": "^9.0.2",
     "koa": "^2.14.2",
@@ -33,6 +34,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.5",
     "@types/koa__cors": "^4.0.3",
     "@types/koa-router": "^7.4.8",
